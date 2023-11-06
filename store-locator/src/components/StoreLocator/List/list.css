@@ -1,0 +1,53 @@
+.root {}
+
+.noResults {
+    border: 2px solid rgb(var(--venia-global-color-gray-400));
+    padding: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.noResults span {
+    font-weight: 600;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-shrink: 0;
+    font-weight: 500;
+    padding: 1rem 0 .8125rem;
+}
+
+.resultsCount {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .summary {
+        align-items: center;
+    }
+
+    .mapView {
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        overflow-x: scroll;
+        padding: 0 2.5rem;
+        display: flex;
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .mapView .items {
+        display: flex;
+        align-items: stretch;
+        column-gap: 1.25rem;
+    }
+}

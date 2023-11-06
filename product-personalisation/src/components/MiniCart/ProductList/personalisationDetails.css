@@ -1,0 +1,41 @@
+.root {
+    margin-bottom: 0.25rem;
+    grid-area: personalisation;
+}
+
+.psnToggle {
+    cursor: pointer;
+    margin-bottom: 0.3rem;
+    display: flex;
+    column-gap: 0.3rem;
+}
+
+.detailsWrap {
+    background: #EFEFEF;
+    padding: 0.4rem 0.4rem 0.1rem;
+    font-size: 0.8rem;
+}
+
+.root .hidden {
+    display: none;
+}
+
+.detailsWrap p {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+.detailsWrap dl {
+    margin-bottom: 0.3rem;
+}
+
+.detailsWrap dt,
+.detailsWrap dd {
+    width: 50%;
+    display: inline-flex;
+    margin-bottom: 0.3rem;
+}
+
+.detailsWrap dt:after {
+    content: ':';
+}

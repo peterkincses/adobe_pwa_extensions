@@ -1,0 +1,22 @@
+.root [class^=item-images] {
+    margin-bottom: 4px;
+}
+
+.root  [class^="option-root" ]{
+    min-width: 100%;
+}
+
+html[data-direction="rtl"] .root [class^="option-root"] {
+    margin-left: 0;
+}
+
+.options [class^="tileList-root"] {
+    top: auto;
+    bottom: 49px;
+    border: 1px solid #000;
+    max-height: 230px;
+    overflow-y: auto;
+}
+html[data-direction="rtl"] .options [class^="tileList-root"] {
+    text-align: left;
+}

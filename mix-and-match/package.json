@@ -1,0 +1,25 @@
+{
+  "name": "@eshopworld/mix-and-match",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Mix and Match Category pages",
+  "main": "index.js",
+  "scripts": {
+    "clean": " "
+  },
+  "license": "(OSL-3.0 OR AFL-3.0)",
+  "author": "EshopWorld",
+  "peerDependencies": {
+    "@apollo/client": "~3.4.0",
+    "@magento/peregrine": "~12.3.0",
+    "@magento/pwa-buildpack": "~11.2.0",
+    "@magento/venia-ui": "~9.3.0"
+  },
+  "pwa-studio": {
+    "targets": {
+      "intercept": "./targets/local-intercept"
+    }
+  }
+}

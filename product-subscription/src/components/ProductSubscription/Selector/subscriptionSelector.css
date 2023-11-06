@@ -1,0 +1,101 @@
+.root {
+    width: 100%;
+    font-size: 0.9rem;
+    /* grid-area: subscriptionOptions; commenting out as it breaks some PDPs */
+}
+
+.rootShort {
+    composes: root;
+    /*max-width: 22rem;*/
+    /*margin: 0 auto;*/
+}
+
+.option {
+    cursor: pointer;
+    border: 1px solid #dedede;
+    box-sizing: border-box;
+    padding: 6px 15px 6px 10px;
+    border-radius: 0;
+}
+
+.option + .option {
+    border-top: none;
+}
+
+.option:hover {
+    background-color: #A4C5D2;
+}
+
+.selectedOption {
+    composes: option;
+    background-color: #A4C5D2;
+}
+
+.option_Loading {
+    composes: option;
+    opacity: 0.5;
+}
+
+.radio_label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+    position: relative;
+}
+
+.radio_input {
+    composes: input from '~@magento/venia-ui/lib/components/RadioGroup/radio.css';
+}
+
+.radio_input:focus {
+    border-color: transparent!important;
+}
+
+.radio_icon {
+    composes: icon from '~@magento/venia-ui/lib/components/RadioGroup/radio.css';
+    position: absolute;
+}
+
+.radio_input:checked + .radio_icon svg {
+    stroke: white;
+    fill: white;
+}
+
+.radio_icon svg {
+    stroke: #646469;
+}
+
+.radio_textWrap {
+    max-width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 2rem);
+    padding-right: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.labelText {
+    text-transform: uppercase;
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.subscriptionOptionPriceWrap {
+    display: flex;
+    flex-direction: column;
+    min-width: 3.5rem;
+    line-height: 100%;
+}
+
+.subscriptionOptionPriceLabel {
+    font-size: 0.7rem;
+    display: none;
+}
+
+.infoIcon {
+    position: absolute;
+    right: 0;
+}

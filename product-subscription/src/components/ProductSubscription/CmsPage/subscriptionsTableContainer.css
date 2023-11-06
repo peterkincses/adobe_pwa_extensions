@@ -1,0 +1,42 @@
+.root {}
+
+.rootCms {
+    padding: 0 1.5rem;
+}
+
+.title,
+.titleCopy {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+@media screen and (min-width: 960px) {
+    .title {
+        font-size: 30px;
+    }
+}
+
+.copy p {
+    margin-bottom: 1rem;
+    text-align: center;
+    /*font-size: 14px;*/
+}
+
+.actions {
+    margin: 2rem 0 1rem;
+    text-align: center;
+}
+
+.learnMore {
+    font-weight: var(--venia-global-fontWeight-semibold);
+    font-size: 15px;
+}
+
+.linkIcon {
+    margin-left: 0.5rem;
+}

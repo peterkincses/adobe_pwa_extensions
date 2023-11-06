@@ -1,0 +1,13 @@
+.root {}
+
+.status {
+    color: green;
+    margin-right: 0.5rem;
+    font-weight: var(--venia-global-fontWeight-semibold);
+    text-transform: capitalize;
+}
+
+.statusClosed {
+    composes: status;
+    color: rgb(var(--venia-global-color-error));
+}

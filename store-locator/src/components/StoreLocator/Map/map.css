@@ -1,0 +1,30 @@
+.root {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .root {
+        height: 70vh;
+    }
+    .listView {
+        display: none;
+    }
+}
+
+/*  Start InfoWindow styles  */
+.root div[role="dialog"] {
+    padding: 0.5rem 1rem 0 0.5rem!important;
+}
+
+.root button[aria-label="Close"] {
+    top: 0.2rem!important;
+    right: 0!important;
+}
+
+.root button[aria-label="Close"] > span {
+    width: 20px!important;
+    height: 20px!important;
+    margin: 4px!important;
+}
+
+/*  End InfoWindow styles  */

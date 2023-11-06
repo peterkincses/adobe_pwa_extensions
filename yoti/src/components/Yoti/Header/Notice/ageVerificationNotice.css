@@ -1,0 +1,18 @@
+:global(:root) {
+    --yoti-header-notice-background-color: #f7a526
+}
+
+.root {
+    background: var(--yoti-header-notice-background-color);
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+
+.root p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.root a {
+    border-bottom: 1px solid currentColor;
+}

@@ -1,0 +1,17 @@
+.dialog {
+    composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+    width: 50vw;
+    min-height: auto;
+}
+
+.buttons {
+    composes: buttons from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+    padding-top: 0.5rem;
+}
+
+.contents {
+    composes: contents from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+    padding: 1rem 2rem;
+}
+
+.errorMsg {} /* applies from brand-elements.css; do not delete */

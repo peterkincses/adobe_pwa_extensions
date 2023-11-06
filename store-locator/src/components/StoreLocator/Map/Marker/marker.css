@@ -1,0 +1,18 @@
+.infoWindowWrap {
+    max-width: 365px;
+}
+
+.infoWindow {
+    composes: root from '~@eshopworld/store-locator/src/components/StoreLocator/List/Item/Content/content.css';
+    padding: 10px;
+    max-width: 340px;
+}
+
+@media screen and (max-width: 767px) {
+    .infoWindow {
+        display: flex;
+    }
+    .infoWindow > div:first-of-type {
+        display: none;
+    }
+}

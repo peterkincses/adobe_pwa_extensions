@@ -1,0 +1,9 @@
+.root {
+    background: pink;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.root p:last-of-type {
+    margin-bottom: 0;
+}

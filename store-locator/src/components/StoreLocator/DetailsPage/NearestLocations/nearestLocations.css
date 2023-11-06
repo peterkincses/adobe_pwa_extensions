@@ -1,0 +1,43 @@
+.root {
+    padding: 0 1.5rem;
+}
+
+.titleWrap {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-weight: 600;
+}
+
+.titleLink {
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.titleLink span {
+    line-height: 160%;
+}
+
+.locations {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 640px) {
+    .locations {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .root {
+        padding: 0;
+    }
+}

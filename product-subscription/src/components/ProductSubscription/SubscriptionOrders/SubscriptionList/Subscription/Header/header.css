@@ -1,0 +1,41 @@
+.root {
+    background: rgb(var(--venia-global-color-gray-100));
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1rem;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+    .root {
+        padding: 0.5rem 1rem;
+        column-gap: 1.5rem;
+    }
+}
+
+.root:hover {
+    background: rgb(var(--venia-global-color-gray-200));
+}
+
+.package {
+    padding: 0.5rem;
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    line-height: 120%;
+    display: inline-flex;
+    min-width: 4.5rem;
+    justify-content: center;
+}
+
+.headerOrderSummary {
+    font-size: 0.9rem;
+    width: calc(100% - 6.5rem);
+}
+.headerOrderSummary > div:first-of-type {
+    text-transform: uppercase;
+    font-weight: bold;
+}

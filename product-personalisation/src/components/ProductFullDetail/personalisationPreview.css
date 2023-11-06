@@ -1,0 +1,37 @@
+.psnPreview {
+  position: absolute;
+  z-index: 100;
+  /*left: .5%;*/
+  right: 0;
+  /*top: 15%;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 15%;*/
+  pointer-events: none;
+  left: 1px;
+  top: 20.4%;
+  width: 12.5%;
+}
+
+.psnPreviewText {
+  composes: psnPreview;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  top: 30%;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.psnPreviewTextVertical {
+  composes: psnPreviewText;
+  transform: rotate(-90deg);
+  margin-top: 0;
+  width: 30%;
+}
+
+.psnPreview img {
+  pointer-events: none;
+  width: 100%;
+  filter: invert(1);
+}

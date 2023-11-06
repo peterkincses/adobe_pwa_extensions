@@ -1,0 +1,51 @@
+.root {
+    position: relative;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0 0 1.25rem;
+}
+
+.storeLocatorTitle {
+    text-transform: capitalize;
+    font-size: 24px;
+    line-height: 1.083333333;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+}
+
+.listSearch {
+    padding: 1rem;
+    background: white;
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        display: flex;
+        flex-direction: row;
+        height: 80vh;
+    }
+    .listSearch {
+        width: 25rem;
+        overflow-y: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .listSearch::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .listSearch {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .listSearch {
+        width: 30rem;
+    }
+}

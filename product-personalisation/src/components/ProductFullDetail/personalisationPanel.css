@@ -1,0 +1,215 @@
+.root {
+  margin: 0 0 1rem;
+  color: #1d1d1b;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.root * {
+  box-sizing: border-box;
+  line-height: 115%;
+}
+
+.panelTabHeading {
+  display: block;
+  font-size: 0;
+  margin: 0 0 -1px;
+  padding: 0;
+}
+
+.panelTabHeading li {
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  z-index: 1;
+  border-style: solid;
+  border-color: #dedede;
+  border-width: 0 0 1px;
+  background: 0 0;
+  width: calc(100%/3);
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  /*display: block;*/
+  font-weight: 600;
+  vertical-align: middle;
+  white-space: normal;
+  color: #aaa;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .1em;
+  padding: 1.4rem 0;
+  transition: all .3s;
+}
+
+.panelTabHeading li:after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: transparent;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+}
+
+.panelTabHeading li.active {
+  color: #1d1d1b;
+}
+
+.panelTabHeading li.active:after {
+  background-color: #f8ab28;
+}
+
+.panelTabHeading li span:first-of-type {
+  margin-right: 5px;
+}
+
+.tabsContent {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+  border: 0;
+  text-align: left;
+}
+
+.actionsToolbar button {
+  margin-bottom: 20px;
+}
+
+.actionsToolbar a {
+  font-size: 14px;
+  color: #1d1d1b;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-left: auto;
+}
+
+.tabContentTitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.personalisationOptions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.personalisationOptions > div {
+  width: calc(100%/3);
+  background: #efefef;
+  text-align: center;
+  border-right: 5px solid #fff;
+  flex-direction: column;
+  margin-bottom: 5px;
+  color: #2a2a2a;
+  padding: 0;
+}
+
+.personalisationOptions > div:hover,
+.personalisationOptions > div.active {
+  background: #1d1d1b;
+  color: #fff;
+}
+.personalisationOptions > div:hover img,
+.personalisationOptions > div.active img {
+  filter: invert(1);
+}
+
+.personalisationOptions label {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.textDirectionOptions {
+  composes: personalisationOptions;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.psnOptionImgWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.psnOptionImgWrap img {
+  max-height: 100%;
+}
+
+.psnOptionFontWrap {
+  composes: psnOptionImgWrap;
+  height: 40px;
+}
+
+.psnOptionFontWrap span {
+  font-size: 2rem;
+}
+
+.psnOptionTitle {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.inputWrap {
+  margin-bottom: 0.5rem;
+}
+
+.inputWrapError {
+  composes: inputWrap
+}
+
+.inputWrapError input,
+.inputWrapError input:focus {
+  color: #e02b27;
+  border-color: #e02b27;
+}
+
+.inputNote {
+  font-size: 0.75rem;
+}
+
+.fieldLabel {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.errorMessage {
+  margin: 0 0 0.5rem;
+  display: block;
+  line-height: 1.2em;
+  background: white;
+  color: #e02b27;
+  font-size: 12px;
+}

@@ -1,0 +1,79 @@
+.root {}
+
+.search {
+    display: flex;
+    column-gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.searchBar {
+    width: 100%;
+}
+
+.searchBar > field {
+    position: relative;
+}
+
+.searchBar input:focus,
+.searchBar input[class*="has-value"]
+{
+    padding-bottom: 1rem;
+}
+.searchBar input:focus + label,
+.searchBar input[class*="has-value"] + label {
+    display: none;
+}
+
+.clearSearch {
+    position: absolute;
+    z-index: 5;
+    width: 2rem;
+    background: white;
+    right: 2px;
+    top: 2px;
+    height: calc(100% - 4px);
+}
+
+.clearSearchText {
+    text-indent: -9999px;
+}
+
+.clearSearch > span {
+    gap: 0;
+}
+
+.closeIcon {
+    display: inline-flex;
+    padding: 1px;
+    background: #e8e8e8;
+    border-radius: 100%;
+    width: 1rem;
+    height: 1rem;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.closeIcon:hover {
+    background: black;
+}
+
+.closeIcon:hover svg {
+    stroke: white;
+}
+
+.root button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.geolocationButton svg {
+    fill: black;
+}
+
+.root button svg + span {
+    visibility: hidden;
+    text-indent: -9999px;
+}
+

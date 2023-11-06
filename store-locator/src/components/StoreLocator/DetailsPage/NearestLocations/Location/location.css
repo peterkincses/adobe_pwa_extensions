@@ -1,0 +1,33 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.locationDetails {
+    composes: root from '~@eshopworld/store-locator/src/components/StoreLocator/List/Item/Content/content.css';
+    grid-template-columns: 1.1rem auto;
+}
+
+.nameAddress {
+    composes: nameAddress from '~@eshopworld/store-locator/src/components/StoreLocator/List/Item/Content/content.css';
+}
+
+.storeNameLink {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.directionLink {
+    margin-bottom: 1.5rem;
+}
+
+.directionLink a {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.mapContainer {
+    height: 10rem;
+    background: #e8e8e8;
+}

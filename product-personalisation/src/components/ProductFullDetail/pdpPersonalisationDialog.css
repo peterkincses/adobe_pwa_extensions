@@ -1,0 +1,113 @@
+.form {
+  composes: form from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+  display: flex;
+  align-items: center;
+}
+
+.dialog {
+  composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+  border-radius: 0;
+  max-height: 98%;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 960px) {
+  .dialog {
+    max-height: 100%;
+  }
+}
+
+.dialog_header {
+  composes: header from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+  border: none;
+}
+
+.body {
+  composes: body from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .body {
+    /*Fix for chat buttons covering add to cart*/
+    padding-bottom: 3rem;
+  }
+}
+
+.contents {}
+
+.productFullDetailRoot {
+  composes: root from '~@magento/venia-ui/lib/components/ProductFullDetail/productFullDetail.css';
+  padding: 0;
+  padding-bottom: 2.5rem;
+}
+
+.psnImageCarousel {
+  composes: imageCarousel from '~@magento/venia-ui/lib/components/ProductFullDetail/productFullDetail.css';
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .psnImageCarousel {
+    margin-right: 2rem;
+  }
+}
+
+.psnImageCarousel button {
+  display: none;
+}
+
+.quantity {
+  display: none;
+}
+
+.options {
+  background: rgb(var(--brand-color-white-darker));
+}
+
+.cartActions {
+  composes: cartActions from '~@magento/venia-ui/lib/components/ProductFullDetail/productFullDetail.css';
+  justify-content: space-between;
+}
+
+@media (max-width: 1023px) {
+  .cartActions {
+    /*flex-direction: column;*/
+  }
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.options [class*='option-root'] > * {
+  flex: 1 1 100%;
+}
+
+.options [class*='option-root'] {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .options [class*='option-root'] > * {
+    justify-content: center;
+  }
+}
+
+.options [class*='option-selection-'] {
+  padding: 0.75rem 1.5rem;
+  margin: 0 -1.5rem 1rem;
+  color: rgb(var(--brand-color-black));
+  background: rgba(0, 0, 0, 0.075);
+  display: inline-flex;
+}
+
+.options [class*='option-title'] {
+  display: none;
+}

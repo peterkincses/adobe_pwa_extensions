@@ -1,0 +1,28 @@
+.root {
+    composes: root from '~@eshopworld/core/src/components/Breadcrumbs/breadcrumbs.css';
+    padding: 1rem;
+    color: #000;
+    margin: 0;
+}
+
+.text {
+    composes: text from '~@eshopworld/core/src/components/Breadcrumbs/breadcrumbs.css';
+}
+
+.divider {
+    composes: text;
+}
+
+.link {
+    composes: text;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:hover {
+}
+
+.currentCategory {
+    composes: text;
+}
+

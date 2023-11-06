@@ -1,0 +1,36 @@
+.root {
+    composes: root from '../mixAndMatch.css';
+}
+
+.titleWrap {
+    composes: titleWrap from '../mixAndMatch.css';
+}
+
+.title {
+    composes: title from '../mixAndMatch.css';
+}
+
+/******** Switcher *************/
+
+.switcher {
+    composes: switcher from '../Switcher/switcher.css';
+}
+
+.filterRoot {
+    composes: root from '../Filters/filters.css';
+}
+
+.subCategory {
+    composes: subCategory from '../mixAndMatch.css';
+}
+
+/******** Item ***********/
+
+.itemRoot [class^=item-images] {
+    margin-bottom: 4px;
+}
+
+html[data-direction="rtl"] .itemRoot [class^="option-root"] {
+    margin-left: 0;
+}
+

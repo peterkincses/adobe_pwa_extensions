@@ -1,0 +1,81 @@
+.backToIntro {
+    composes: root_highPriority from '../../../../../../../components/Button/button.css';
+    background-color: #f8ab28;
+    border-color: #f8ab28;
+    z-index: 901;
+    padding: 3px 10px;
+    border-radius: 5px;
+    min-width: 0;
+    display: inline-flex;
+    margin: 0 0 20px;
+    align-items: center;
+}
+
+.backToIntro [class*="image-placeholder-"] {
+    background: none;
+}
+
+.backToIntroLoaded {
+    composes: loaded from '~@magento/venia-ui/lib/components/Image/image.css';
+    filter: invert(1);
+}
+
+.backToIntroButtonText {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+@media (max-width: 639px) {
+    .root {
+        position: fixed;
+        background: #000000;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 100;
+    }
+
+    .videoWrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .videoWrapper video {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        overflow: scroll;
+        object-fit: cover;
+        max-width: 100%;
+        background: black;
+        max-height: 100%;
+    }
+
+    .videoWrapper video + div,
+    .videoWrapper video + div + div {
+        position: fixed;
+    }
+
+    .videoWrapper video + div + div {
+        z-index: 900;
+        width: 60%;
+        margin: 15px auto 0;
+        left: 0;
+        right: 0;
+    }
+
+    .backToIntro {
+        position: fixed;
+        margin: 20px;
+    }
+
+    .backToIntroButtonText {
+        display: none;
+    }
+}

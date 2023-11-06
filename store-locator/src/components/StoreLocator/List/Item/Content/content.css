@@ -1,0 +1,50 @@
+.root {
+    display: grid;
+    grid-template-columns: 1.5rem auto;
+    column-gap: 1rem;
+    letter-spacing: .03125rem;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+
+.counter {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 2rem;
+    padding-top: 4px;
+    text-align: center;
+    justify-content: center;
+    background: black;
+    font-size: .6875rem;
+    font-weight: 500;
+    color: #fff;
+    background: url('./locationPin.svg') no-repeat top center;
+}
+
+.nameAddress {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.storeName {
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.storeName a {
+    text-decoration: underline;
+    outline: none;
+}
+
+.storeLinks {
+    display: flex;
+    column-gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.storeLinks a {
+    text-decoration: underline;
+    font-weight: 600;
+    color: black;
+}

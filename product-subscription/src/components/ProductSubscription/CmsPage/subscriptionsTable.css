@@ -1,0 +1,89 @@
+.root {
+    display: flex;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    color: rgba(37,37,37,1);
+    flex-direction: column;
+    padding: 1.5rem 0 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        flex-direction: row;
+    }
+}
+
+.column {}
+
+.heading {
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-bottom: 0;
+}
+
+.packageName {
+    width: 100%;
+    padding: 0.7rem;
+    background: gold;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: var(--venia-global-fontWeight-semibold);
+    letter-spacing: 1px;
+}
+
+.packageNameGold {
+    composes: packageName;
+    background: #FCB549 linear-gradient(251.76deg, #F48C38 6.9%, rgba(244, 140, 56, 0) 85.02%);
+}
+
+.packageNameSilver {
+    composes: packageName;
+    background: #B4C7D8 linear-gradient(251.76deg, #808AAB 6.9%, rgba(204, 226, 234, 0) 85.02%);
+}
+
+.packageNameBronze {
+    composes: packageName;
+    background: #E98852 linear-gradient(243.04deg, #B3481A 9.39%, rgba(244, 140, 56, 0) 115.65%);
+}
+
+.tier span:first-of-type {
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.breakdown {
+    display: grid;
+    font-size: 0.8rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.breakdown > div {
+    padding: 1rem;
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+
+.breakdown > div:first-of-type,
+.breakdown > div:first-of-type + div {
+    margin-bottom: 0.2rem;
+}
+
+.breakdown > div:nth-of-type(2n) {
+    background: #e8e8e8;
+    border-left: 0;
+}
+
+.price {
+    color: rgb(var(--brand-color-moor-forest));
+    font-weight: var(--venia-global-fontWeight-semibold);
+    font-size: 16px;
+}
+
+.discount {
+    color: rgba(224, 8, 48, 1);
+    margin-top: 0.5rem;
+    font-weight: var(--venia-global-fontWeight-semibold);
+}

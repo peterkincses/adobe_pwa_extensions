@@ -1,0 +1,99 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #DADADA;
+    padding: 0.5rem;
+    color: #666666;
+    gap: 0.75rem;
+    border-radius: 4px;
+    height: 260px;
+    overflow: auto;
+}
+
+@media screen and (min-width: 640px) {
+    .root {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+        grid-auto-rows: minmax(min-content, max-content);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .root {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.filter {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.filterActive {
+    composes: filter;
+}
+
+.filter:hover .filterIcon,
+.filterActive .filterIcon {
+    border-color: black;
+}
+
+@keyframes grow{
+    0%,to{-webkit-transform:scale(.8)}
+    20%{-webkit-transform:scale(1)}
+    100%{-webkit-transform:scale(0)}
+}
+
+.filterAlsoAvailable {
+    composes: filter;
+}
+
+.filterAlsoAvailable:before {
+    background: linear-gradient(90deg,#0644a171,#862e816c);
+    animation: 5s grow infinite;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 100%;
+}
+
+.filterIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    border: 1px solid #DADADA;
+    border-radius: 100%;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.3s ease-in-out;
+    width: 2rem;
+    height: 2rem;
+}
+
+.imageRoot {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.filterName {
+    font-size: 11px;
+    text-transform: capitalize;
+    transition: color 0.3s ease-in-out;
+}
+
+.filter:hover .filterName,
+.filterActive .filterName {
+    font-weight: var(--venia-global-fontWeight-semibold);
+    color: #24272A;
+}

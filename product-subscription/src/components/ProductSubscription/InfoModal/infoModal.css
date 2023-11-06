@@ -1,0 +1,45 @@
+.form {
+    composes: form from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+}
+
+.dialog {
+    composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.css';
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+    .form {
+        align-content: center;
+    }
+    .dialog {
+        width: 100%;
+        max-width: 95%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.contents {
+    padding: 1rem;
+}
+
+.modalTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: var(--venia-global-fontWeight-semibold);
+    margin-bottom: 1rem;
+}
+
+.modalTitle + p {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 961px) {
+    .modalTitle {
+        font-size: 26px;
+    }
+}

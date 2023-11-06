@@ -1,0 +1,49 @@
+.sidebarHeading {
+    padding: 1rem;
+    color: white;
+    line-height: 130%;
+}
+
+.sidebarTitle {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.sidebarSubTitle {
+    font-size: 0.9rem;
+}
+
+.totals {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    line-height: 120%;
+    font-size: 0.95rem;
+    background: #ccc;
+}
+
+.totalsText > div:first-of-type {
+    margin-bottom: 0.2rem;
+}
+
+.nextDeliveryDateText {
+    font-size: 0.8rem;
+}
+
+.nextDeliveryDate {
+    white-space: nowrap;
+}
+
+.totalsPrice {
+    text-align: right;
+}
+
+.cartActions {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+}
+
+.hidden {
+    display: none;
+}

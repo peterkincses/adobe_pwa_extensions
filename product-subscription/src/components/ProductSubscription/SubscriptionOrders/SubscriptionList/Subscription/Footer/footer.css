@@ -1,0 +1,40 @@
+.root {
+    background: rgb(var(--venia-global-color-gray-200));
+}
+
+@media screen and (min-width: 768px) {
+    .root > div:first-of-type {
+        display: flex;
+    }
+}
+
+.root > div:first-of-type > div {
+    width: 50%;
+    padding-bottom: 1rem;
+}
+
+address {
+    max-width: 15rem;
+    margin-bottom: 0.5rem;
+    /*font-size: 0.9rem;*/
+    font-style: normal;
+    line-height: 130%;
+}
+
+.buttonWrap {
+    border-top: 1px solid lightgrey;
+    padding-top: 1rem;
+}
+
+.underlinedLinks {
+    composes: underlinedLinks from '../subscription.css';
+}
+
+.addressModalContent {
+    padding: 1rem;
+    position: relative;
+}
+
+.loadingIndicator {
+    composes: loadingIndicator from '../subscription.css';
+}

@@ -1,0 +1,89 @@
+.carousel {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+}
+
+/**
+*** we can't use slick slider's fade setting as it interferes when infinite scroll and image lazyload is enabled at the same time
+https://github.com/kenwheeler/slick/issues/2110
+**/
+.carousel [class^="slick-slider"] [class^="slick-slide"] {
+    padding-bottom: 0;
+    opacity: 0;
+    transition: opacity 500ms ease-in 0s, visibility 500ms ease-in 0s;
+}
+
+.carousel [class^="slick-slider"] [class^="slick-slide"][aria-hidden="false"] {
+    opacity: 1;
+}
+
+.carousel [class^="item-options"] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in 0s, visibility 500ms ease-in 0s;
+}
+
+.carousel [class*="slick-current"] [class^="item-options"] {
+    opacity: 1;
+    visibility: visible;
+}
+
+/**** end carousel fade effects *****/
+
+.carousel button[class^="slick-arrow"] {
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dddddd;
+    z-index: 9;/*lower than main navigation submenus + mobile sticky header*/
+    top: calc(50% + ((50px + 4px - 30px)/2));/*size selector + gap + arrow height*/
+    transform: none;
+}
+
+.carousel button[class^="slick-arrow"]:hover {
+    background: #e8e8e8;
+}
+
+.carousel button[class*="slick-disabled"] {
+    opacity: 0;
+}
+
+.carousel button[class^="slick-arrow"]:before {
+    font-family: 'aeo-icons';
+    font-size: 10px;
+    display: block;
+    color: #000;
+    font-weight: 700;
+}
+
+.carousel button[class*="slick-prev"] {
+    left: -0.5rem;
+}
+
+.carousel button[class*="slick-prev"]:before {
+    content: "\e006";
+}
+
+.carousel button[class*="slick-next"] {
+    right: -0.5rem;
+    padding-left: 2px;
+}
+
+.carousel button[class*="slick-next"]:before {
+    content: "\e005";
+}
+
+/* #215139: create additional space around the arrows to avoid accidental product image click through*/
+.carousel button[class^="slick-arrow"]:after {
+    content: '';
+    width: 60px;
+    height: 80px;
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: -15px;
+    z-index: 108;
+}
+
+:global html[data-direction="rtl"] [class^=mixAndMatch-root] .slick-slide {
+    float: left;
+}

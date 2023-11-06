@@ -1,0 +1,52 @@
+.summaryProduct {
+    composes: root from '~@magento/venia-ui/lib/components/OrderHistoryPage/OrderDetails/item.css';
+    padding: 1rem;
+    border-bottom: 1px solid white;
+    font-size: 0.85rem;
+    grid-template-columns: 1.5fr 1.5fr 2rem;
+    grid-template-areas: "productInfoContainer productInfoContainer productInfoContainer"
+                         "quantity price deleteColumn";
+    row-gap: 0;
+}
+
+@media screen and (min-width: 1400px) {
+    .summaryProduct {
+        grid-template-columns: minmax(auto,60%) 6.5rem 6.5rem 1rem;
+        grid-template-areas: "productInfoContainer quantity price deleteColumn"
+    }
+}
+
+.productInfoContainer {
+    grid-area: productInfoContainer;
+}
+
+.quantity {
+    grid-area: quantity;
+}
+
+.price {
+    grid-area: price;
+    padding-top: 0.5rem;
+}
+
+.regularPrice {
+    text-decoration: line-through;
+    padding-right: 0.3rem;
+}
+
+.deleteColumn {
+    grid-area: deleteColumn;
+    text-align: right;
+}
+
+.deleteColumn button {
+    cursor: pointer;
+}
+
+.deleteColumn button svg {
+    transition: stroke 0.2s ease-in-out;
+}
+
+.deleteColumn button:hover svg {
+    stroke: red;/*use whatever you like*/
+}

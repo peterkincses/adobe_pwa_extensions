@@ -1,0 +1,23 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/OrderHistoryPage/OrderDetails/item.css';
+    padding: 1rem;
+    border-top: 1px solid #e8e8e8;
+}
+
+@media screen and (min-width: 961px) {
+    .root {
+        grid-template-columns: 7rem 2fr 1fr 1fr;
+    }
+}
+
+.root:first-of-type {
+    margin-top:1rem;
+}
+
+.price {
+    display: inline-flex;
+    column-gap: 0.5rem;
+}
+.originalPrice {
+    text-decoration: line-through;
+}

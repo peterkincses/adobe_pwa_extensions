@@ -1,0 +1,68 @@
+.root {
+    width: 100%;
+    background: white;
+    padding: 0 1rem 1rem;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--venia-global-fontSize-75);
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .row {
+        font-size: var(--venia-global-fontSize-100);
+    }
+}
+
+.subtotal {
+    composes: row;
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.row > div {
+    padding: 5px 0;
+}
+
+.buttonWrap {
+    text-align: center;
+}
+
+.button {
+    composes: root_highPriority from '~@magento/venia-ui/lib/components/Button/button.module.css';
+    margin: 1rem auto;
+    width: 100%;
+    font-weight: var(--venia-global-fontWeight-semibold);
+    min-height: 50px;
+    background-color: #385ADC;
+}
+
+.button:hover {
+    box-shadow: inset 0 0 0 3px #1f3fb7;
+    background-color: #385adc;
+}
+
+.button:focus {
+    box-shadow: none;
+}
+
+.price {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.priceWrapSpecial {
+    color: red;
+    font-weight: var(--venia-global-fontWeight-bold);
+}
+
+.priceWrapSpecial + div {
+    text-decoration: line-through;
+}

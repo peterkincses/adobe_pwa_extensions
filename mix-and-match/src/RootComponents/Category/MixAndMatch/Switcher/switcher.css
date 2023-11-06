@@ -1,0 +1,117 @@
+.root {
+    width: 11rem;
+    min-height: 3rem;
+}
+
+.root [class^="cmsBlock-root"],
+.root [class^="cmsBlock-content"],
+.root [class^="richContent-root"],
+.root [class^="html-root"] {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.root select {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #DADADA;
+    padding-left: 0.5rem;
+}
+
+.switcher {
+    width: 11rem;
+    position: relative;
+    font-size: 13px;
+}
+
+.switcher_open {
+    composes: switcher;
+}
+
+.trigger {
+    padding: 4px 36px 8px 16px;
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.trigger:after {
+    font-family: 'aeo-icons';
+    content: '\e042';
+    position: absolute;
+    top: 21px;
+    right: 14px;
+    font-size: 16px;
+    line-height: 8px;
+    /*transition: transform 0.3s ease-in-out;*/
+}
+
+.switcher_open .trigger {
+    border-color: black;
+}
+
+/*.switcher_open .trigger:after {*/
+/*    transform: rotate(180deg);*/
+/*}*/
+
+html[data-direction="rtl"] .trigger {
+    text-align: right;
+    padding: 4px 16px 8px 36px;
+}
+
+html[data-direction="rtl"] .trigger:after {
+    right: auto;
+    left: 14px;
+}
+
+.triggerLabel {
+    display: block;
+    color: #888;
+    padding-top: 6px;
+    font-size: 11px;
+    line-height: 1.428571429;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+}
+
+/*additional selector specificity to overwrite pagebuilder styles*/
+.root .switcher ul {
+    display: none;
+    border: 1px solid black;
+    background-color: #fff;
+    position: absolute;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-height: 21rem;
+    z-index: 16;
+    padding: 0.5rem 0;
+    margin-top: -2px;
+}
+
+.root .switcher_open ul {
+    display: block;
+}
+
+.switcher ul li {
+    padding: 0.5rem 1rem;
+    line-height: 130%;
+}
+
+.switcher ul li:not(.groupName):hover {
+    background: #000;
+    cursor: pointer;
+    color: #fff;
+    font-weight: var(--venia-global-fontWeight-bold);
+}
+
+.root ul [class^="groupName"] {
+    font-weight: var(--venia-global-fontWeight-bold);
+}
+
+.root ul li a {
+    text-decoration: none;
+}
