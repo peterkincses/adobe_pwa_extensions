@@ -1,5 +1,5 @@
 {
-  "name": "@eshopworld/store-locator",
+  "name": "@peterkincses/store-locator",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
@@ -10,7 +10,7 @@
     "clean": " "
   },
   "license": "(OSL-3.0 OR AFL-3.0)",
-  "author": "EshopWorld",
+  "author": "PeterK <kincses.p@googlemail.com>",
   "peerDependencies": {
     "@apollo/client": "~3.4.0",
     "@magento/peregrine": "~12.3.0",

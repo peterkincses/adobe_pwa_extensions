@@ -1,6 +1,6 @@
 {
-  "name": "@bat/yoti",
-  "author": "PeterK <peter.kincses@wundermanthompson.com>",
+  "name": "@peterkincses/yoti_authorization",
+  "author": "PeterK <kincses.p@googlemail.com>",
   "version": "0.0.0",
   "main": "src/index.js",
   "pwa-studio": {

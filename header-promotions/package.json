@@ -1,5 +1,5 @@
 {
-  "name": "@eshopworld/header-promotions",
+  "name": "@peterkincses/header-promotions",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
@@ -7,7 +7,7 @@
   "description": "Add Promotion slider in the header",
   "main": "index.js",
   "license": "(OSL-3.0 OR AFL-3.0)",
-  "author": "EShopWorld",
+  "author": "PeterK <kincses.p@googlemail.com>",
   "peerDependencies": {
     "@apollo/client": "~3.4.0",
     "@magento/pwa-buildpack": "~11.2.0",

@@ -1,6 +1,6 @@
 {
-  "name": "@bat/product-subscription",
-  "author": "Peter Kincses <kincses.p@googlemail.com>",
+  "name": "@peterkincses/product-subscription",
+  "author": "PeterK <kincses.p@googlemail.com>",
   "version": "0.0.0",
   "main": "src/index.js",
   "pwa-studio": {
